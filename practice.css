@@ -1,0 +1,197 @@
+html, body {
+    background-color: #1e2a2d;
+    color: #f2ebe9;
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+#loadingClass {
+    text-align: center;
+    font-size: 30px;
+    background-color: #eddcd9;
+    padding: 5px;
+    margin: 0 auto;
+}
+
+.scoreID1 {
+    padding-top: 80px;
+    font-size: 70px;
+    color: #e99f4c;
+}
+
+.scoreID2, .scoreID3 {
+    color: #264143;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px 20px;
+    background-color: #f2ebe9;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar i {
+    color: #264143;
+    font-size: 20px;
+}
+
+.navbar i:hover {
+    color: #496b6d;
+    cursor: pointer;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #264143;
+}
+
+.logo div a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #264143;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #264143;
+}
+
+#div1, #div2, #audioID {
+    margin: 30px auto;
+    padding-left: 20px;
+    max-width: 800px;
+    text-align: center;
+}
+
+#div1 {
+    font-size: 1.1em;
+    color: #e99f4c;
+}
+
+#div2 {
+    color: #d7d6d6;
+    line-height: 1.8;
+    font-size: 1.3em;
+}
+
+/* Button styling */
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 17px;
+    padding: 0.8em 1.5em;
+    color: white;
+    background: linear-gradient(to right, #e99f4c, #ffd3a0);
+    border: none;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    margin: 30px auto;
+}
+
+button svg {
+    margin-right: 8px;
+    transform: rotate(30deg);
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+button span {
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+button:hover {
+    background: linear-gradient(to right, #ffd3a0, #e99f4c);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+button:hover svg {
+    transform: translateX(5px) rotate(90deg);
+}
+
+button:hover span {
+    transform: translateX(7px);
+}
+
+/* Styling the audio container */
+audio {
+    width: 100%; /* Full width of the parent container */
+    max-width: 600px;
+    margin: 20px auto;
+    display: block;
+    background-color: #264143;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the audio progress bar (webkit browsers) */
+audio::-webkit-media-controls-panel {
+    background-color: #264143;
+    border-radius: 12px;
+}
+
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-rewind-button,
+audio::-webkit-media-controls-forward-button {
+    color: #e99f4c;
+}
+
+audio::-webkit-media-controls-timeline {
+    background-color: #496b6d;
+    border-radius: 4px;
+    height: 6px;
+}
+
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+    color: #f2ebe9;
+    font-size: 14px;
+}
+
+audio::-webkit-media-controls-volume-slider {
+    background-color: #496b6d;
+}
+
+audio::-webkit-media-controls-play-button:hover,
+audio::-webkit-media-controls-rewind-button:hover,
+audio::-webkit-media-controls-forward-button:hover {
+    color: #ffd3a0;
+}
+
+/* For non-webkit browsers (generic styling) */
+audio {
+    outline: none;
+    border: none;
+}
+
+audio:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Container around the audio player for better spacing */
+.audio-container {
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #1e2a2d;
+    border-radius: 16px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+}
+

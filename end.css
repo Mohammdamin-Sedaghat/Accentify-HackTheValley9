@@ -1,0 +1,87 @@
+html {
+  font-family: "Montserrat", sans-serif;
+  background-color: #eddcd9;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.Outro {
+  font-size: 24px;
+  color: #264143;
+  margin-top: 20px;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  font-family: inherit;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 24px;
+  padding: 0.8em 1.3em;
+  color: #f2ebe9;
+  background-color: #264143;
+  border: none;
+  letter-spacing: 0.05em;
+  border-radius: 16px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+button svg {
+  margin-right: 10px;
+  transform: rotate(30deg);
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+button:hover svg {
+  transform: translateX(5px) rotate(90deg);
+}
+
+.progress-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.progress-circle {
+  width: 120px; /* Adjusted width */
+  height: 120px; /* Adjusted height */
+  border-radius: 50%;
+  border: 6px solid #264143; /* Adjusted border thickness */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.progress-circle::before {
+  content: '';
+  position: absolute;
+  width: 100px; /* Adjusted inner circle width */
+  height: 100px; /* Adjusted inner circle height */
+  background-color: #eddcd9;
+  border-radius: 50%;
+}
+
+.progress-text {
+  font-size: 18px; /* Adjusted text size */
+  color: #264143;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.progress-subtext {
+  font-size: 12px; /* Adjusted subtext size */
+  color: #264143;
+  z-index: 1;
+}

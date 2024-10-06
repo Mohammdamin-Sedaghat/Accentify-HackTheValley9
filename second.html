@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>ComeDaddy</title>
+        <script src="https://kit.fontawesome.com/db6a11357e.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <script src="app.js"></script>
+    </head>
+    <body id="bodyID">
+        <nav class="navbar">
+            <div class="logo">
+                <div><img src="images/logoWithText.png" style="height: 25px;"></div>
+                <div style="padding-top: 4px;"><a href="index.html">Home</a></div>
+            </div>
+            <div class="menu">
+                <i class="fa-solid fa-fire"></i>
+                <a href="AccountInfo.html">
+                    <i class="fa-solid fa-circle-user"></i>
+                </a>
+            </div>
+        </nav>
+        
+        <main>
+            <!-- Dashboard Section -->
+            <section class="dashboard">
+                <h1 class="title">Welcome to Your Dashboard</h1>
+                <p class="subtitle">Track your progress and improve your accent every day!</p>
+
+                <!-- Progress Wheel -->
+                <div class="progress-container">
+                    <div class="progress-circle" id="progressCircle">
+                        <div class="progress-text">
+                            <span id="progressPercentage">75%</span>
+                            <p>Completed</p>
+                        </div>
+                    </div>
+                    <p class="progress-label">Today's Tasks</p>
+                </div>
+
+                <!-- Streak Tracker -->
+                <div class="streak-container">
+                    <p><i class="fa-solid fa-calendar"></i> You’re on a <strong>3-day streak!</strong> Keep going!</p>
+                </div>
+                
+                <!-- Encouragement Message -->
+                <div class="encouragement">
+                    <p>Keep practicing! Improving your accent will help you communicate more confidently. You're doing great!</p>
+                </div>
+            </section>
+
+            <!-- Microphone Interaction Section -->
+            <section class="interaction-section">
+                <div class="rectangle" id="rectangleID">
+                    <p class="speech">Today's practice:</p>
+                    <p class="speech">"Hack the Valley is the best hackathon! Can't wait to come back next year and do this again."</p>
+                
+                    <div id='result' class="speech"></div>
+                    <div id='label-container'></div>
+                
+                    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+                    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/speech-commands@0.4.0/dist/speech-commands.min.js"></script>
+
+                    <button class="Microphone_button" id="micro" type='button' onmousedown='init()' onmouseup='stopRecording()'>
+                        <i class="fa-solid fa-microphone-lines w3-jumbo" id="Microphone_Icon" style="font-size: 50px;"></i>
+                    </button>
+                </div>
+            </section>
+        </main>
+
+        <div id="extraMessage"></div>
+        <div id="buttonContainer"></div>
+        <script src="index.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/speech-commands@0.4.0/dist/speech-commands.min.js"></script>
+    </body>
+</html>
